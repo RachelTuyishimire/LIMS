@@ -1,5 +1,5 @@
 body{
-    background-color: #74b816;
+    background: whitesmoke;
 }
 header{
     position: fixed;
@@ -14,13 +14,13 @@ header{
 }
 .logo{
       font-size: 2em;
-      color: white;
+      color: #aa9166;
       user-select: none;
 }
 .nav a{
     position: relative;
     font-size: 1.1em;
-    color: white;
+    color: #020201;
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
@@ -58,13 +58,14 @@ header{
     transition: .5s;
 }
 .btn:hover{
-    background: #fff;
+    background: #020201;
     color: grey;
 }
 .contact {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
+    color:#3a352c;
 }
 
 .contact .contact-info {

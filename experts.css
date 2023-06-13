@@ -1,0 +1,268 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo{
+      font-size: 2em;
+      color: #aa9166;
+      user-select: none;
+}
+.nav a{
+    position: relative;
+    font-size: 1.1em;
+    color: #020201;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right ;
+    transform: scaleX(0)
+    /* transition: transform .5s; */
+    
+}
+.nav a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1) 
+}
+.btn{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    /* margin-left: 20px; */
+    transition: .5s;
+}
+.btn:hover{
+    background: #020201;
+    color: grey;
+}
+.team {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+.lims{
+    color:#aa9166;
+    font-size: 20px;
+}
+
+.team .team-item {
+    margin-bottom: 30px;
+}
+
+.team .team-img {
+    position: relative;
+}
+
+.team .team-img img {
+    width: 100%;
+}
+
+.team .team-text {
+    position: relative;
+    padding: 50px 15px 30px 15px;
+    text-align: center;
+    background: #121518;
+}
+
+.team .team-text h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #aa9166;
+}
+
+.team .team-text p {
+    margin: 0;
+    color: #999999;
+}
+
+.team .team-social {
+    position: absolute;
+    width: calc(100% - 60px);
+    height: 50px;
+    top: -25px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #aa9166;
+    font-size: 0;
+    transition: .5s;
+}
+
+.team .team-item:hover .team-social {
+    width: 100%;
+    left: 0;
+}
+
+.team .team-social a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: #121518;
+    transition: .3s;
+}
+
+.team .team-social a:last-child {
+    margin-right: 0;
+}
+
+.team .team-social a:hover {
+    color: #ffffff;
+}
+.team{
+    margin-top: 10%;
+}
+.footer {
+    position: relative;
+    margin-top: 45px;
+    padding-top: 180px;
+    background: #121518;
+    color: #ffffff;
+}
+
+.footer .footer-about,
+.footer .footer-link,
+.footer .footer-contact {
+    position: relative;
+    margin-bottom: 45px;
+    color: #999999;
+}
+
+.footer .footer-about h2,
+.footer .footer-link h2,
+.footer .footer-contact h2{
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #aa9166;
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    color: #999999;
+    transition: .3s;
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .footer-link a:hover {
+    color: #aa9166;
+    letter-spacing: 1px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 20px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #aa9166;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #999999;
+}
+
+.footer .footer-menu .f-menu {
+    position: relative;
+    padding: 15px 0;
+    background: #000000;
+    font-size: 0;
+    text-align: center;
+}
+
+.footer .footer-menu .f-menu a {
+    color: #999999;
+    font-size: 16px;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .footer-menu .f-menu a:hover {
+    color: #aa9166;
+}
+
+.footer .footer-menu .f-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+
+.footer .copyright {
+    padding: 30px 15px;
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #999999;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #aa9166;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer .copyright p a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer .copyright p,
+    .footer .copyright .col-md-6:last-child p {
+        margin: 5px 0;
+        text-align: center;
+    }
+}
