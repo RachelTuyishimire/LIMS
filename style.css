@@ -9,7 +9,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('images/law.jpg') no-repeat;
+    background: url('images/laws.jpg') no-repeat;
+    /* background-color: #aa9166; */
     background-size: cover;
     background-position: center;
 
@@ -35,7 +36,7 @@ header{
 .nav a{
     position: relative;
     font-size: 1.1em;
-    color: #020201;
+    color: white;
     font-weight: bold;
     text-decoration: none;
     font-weight: 500;
@@ -63,18 +64,18 @@ header{
     width: 130px;
     height: 50px;
     background: transparent;
-    border: 2px solid black;
+    border: 2px solid white;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
-    color: black;
+    color: white;
     font-weight: 500;
     margin-left: 40px;
     transition: .5s;
 }
 .btn:hover{
-    background: #020201;
+    background: white;
     color: grey;
 }
 .wrapper{

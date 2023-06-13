@@ -1,6 +1,7 @@
 body{
-    background: url(images/law.jpg) repeat;
+    background: url(images/justice.jpg) repeat;
     background-size: cover;
+    /* background-color: #aa9166; */
     background-position: center;
     
 
@@ -39,8 +40,8 @@ body{
     padding: 15px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #aa9166;
-    color: white;
+    background-color: white;
+    color: #aa9166;
     font-size: 18px;
     font-weight: bold;
     /* margin-top: -50%; */
