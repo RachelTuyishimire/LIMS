@@ -8,6 +8,8 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    background: #dee2e6;
+    
 }
 .logo{
       font-size: 2em;
@@ -42,6 +44,8 @@ header{
 }
 .btn{
     width: 130px;
+    margin-bottom: -15%;
+    text-align: center;
     height: 50px;
     background: transparent;
     border: 2px solid white;
@@ -62,10 +66,16 @@ header{
     text-align: center;
    
 }
+.heading{
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
 .team {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
+    filter: drop-shadow(4px 4px 8px black);
 }
 .lims{
     color:#aa9166;

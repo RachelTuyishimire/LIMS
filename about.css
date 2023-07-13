@@ -12,6 +12,7 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    background: #dee2e6;
 }
 .logo{
       font-size: 2em;
@@ -83,7 +84,8 @@ header{
     background: #aa9166;
     border-radius: 15px;
     width: 520px;
-    margin-left: -13%;
+    margin-left: -17%;
+    filter:drop-shadow(4px 4px 8px black)
 }
 .lims{
     color: #aa9166;
@@ -129,6 +131,7 @@ header{
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
+    filter: drop-shadow(4px 4px 8px black);
 }
 
 .service .service-item {
