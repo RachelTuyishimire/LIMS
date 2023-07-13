@@ -26,6 +26,7 @@ header{
     align-items: center;
     z-index: 99;
     background: #dee2e6;
+    
 }
 .logo{
       font-size: 2em;
@@ -37,11 +38,12 @@ header{
 .nav a{
     position: relative;
     font-size: 1.1em;
-    color: white;
+    color: black;
     font-weight: bold;
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
+
 }
 .nav a::after{
     content: '';
@@ -65,7 +67,7 @@ header{
     width: 130px;
     height: 50px;
     background: transparent;
-    border: 2px solid white;
+    border: 2px solid black;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
@@ -76,8 +78,8 @@ header{
     transition: .5s;
 }
 .btn:hover{
-    background: white;
-    color: grey;
+    background: black;
+    color: white;
 }
 .wrapper{
     position: relative;
