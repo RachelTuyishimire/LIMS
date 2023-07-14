@@ -52,6 +52,10 @@ header{
     margin-top: 5%;
     transition: .5s;
 }
+.chat:hover{
+    background: #020201;
+    color: #aa9166;
+}
 .nav a:hover::after{
     transform-origin: left;
     transform: scaleX(1) 
@@ -69,15 +73,22 @@ header{
     font-size: 1.1em;
     color: #aa9166;
     font-weight: 500;
-    /* margin-left: 20px; */
+    margin-left: 20px;
     transition: .5s;
+    filter: drop-shadow(4px 4px 8px #aa9166);
 }
-.btn:hover{
+.chat:hover{
     background: #020201;
-    color: grey;
+    color: #aa9166;
+}
+.chat a {
+    color: black;
+    
 }
 .lawyer{
     text-align: center;
+    text-decoration: none;
+    filter: none;
    
 }
 .heading{

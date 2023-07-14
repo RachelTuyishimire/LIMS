@@ -62,11 +62,33 @@ header{
     background: #020201;
     color: grey;
 }
+
+.chat:hover{
+    background: #020201;
+    color: #aa9166;
+}
 .contact {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
     color:#3a352c;
+}
+.chat{
+    width: 130px;
+    height: 50px;
+    border: 2px solid #aa9166;
+    background: #aa9166;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: black;
+    font-weight: 500;
+    margin-top: 5%;
+    transition: .5s;
+    cursor: pointer;
+    filter:drop-shadow(4px 4px 8px #aa9166) ;
+    font-size: 1.1em;
 }
 
 .contact .contact-info {
@@ -75,6 +97,7 @@ header{
     width: 100%;
     padding: 30px;
     background: #121518;
+    filter: drop-shadow(4px 4px 8px black);
 }
 
 .contact .contact-item {
