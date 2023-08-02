@@ -1,5 +1,5 @@
 body{
-    background: url(images/justice.jpg) repeat;
+    background: url(images/home.jpg) repeat;
     background-size: cover;
     /* background-color: #aa9166; */
     background-position: center;
@@ -49,5 +49,11 @@ body{
   #chat-form button:hover{
     background: #aa9166;
     color: white;
+}
+.disclaimer{
+  text-align: center;
+  margin-bottom: -20%;
+  color: white;
+  font-size: 60px;
 }
   

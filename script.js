@@ -1,3 +1,10 @@
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+// import { getDatabase } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+// import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
+
+
+
 const wrapper = document.querySelector(".wrapper");
 const loginLink = document.querySelector(".login-link");
 const registerLink = document.querySelector(".register-link");
@@ -59,87 +66,39 @@ const displayExperts = async()=>{
 displayExperts();
 
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyB33KAK6Vv32j2IpV0kUWRirIMycjnRMJM",
+    authDomain: "lims-98b02.firebaseapp.com",
+    databaseURL: "https://lims-98b02-default-rtdb.firebaseio.com",
+    projectId: "lims-98b02",
+    storageBucket: "lims-98b02.appspot.com",
+    messagingSenderId: "246662920260",
+    appId: "1:246662920260:web:70b4193f5dc946166f6411"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+  signup.addEventListener('click', (e) =>{
+
+    var username = document.getElementById('username').value
+    var email = document.getElementById('email').value
+    var password = document.getElementById('password').value
 
 
-// Simulated data for messages and user list
-const messages = [
-    { content: 'Hello!', timestamp: '9:00 AM' },
-    { content: 'How are you?', timestamp: '9:02 AM' },
-    { content: 'Im good, thanks!', timestamp: '9:05 AM' },
-  ];
-  
-  const userList = ['User1', 'User2', 'User3'];
-  
-  // Display messages in the chat window
-  const chatMessages = document.getElementById('chat-messages');
-  messages.forEach((message) => {
-    const content = document.createElement('p');
-    content.textContent = message.content;
-  
-    const timestamp = document.createElement('span');
-    timestamp.textContent = message.timestamp;
-  
-    const messageContainer = document.createElement('div');
-    messageContainer.appendChild(content);
-    messageContainer.appendChild(timestamp);
-  
-    chatMessages.appendChild(messageContainer);
+    createUserWithEmailAndPassword(auth,username, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert('errorMessage')
+    // ..
   });
-  
-  // Display user list
-  const userContainer = document.getElementById('user-list');
-  userList.forEach((user) => {
-    const userElement = document.createElement('p');
-    userElement.textContent = user;
-  
-    userContainer.appendChild(userElement);
-  });
-  
-  // Submit message
-  const chatForm = document.getElementById('chat-form');
-  const messageInput = document.getElementById('message-input');
-  
-  chatForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const content = messageInput.value;
-    const contentElement = document.createElement('p');
-    contentElement.textContent = content;
-  
-    const timestamp = document.createElement('span');
-    timestamp.textContent = new Date().toLocaleTimeString();
-  
-    const messageContainer = document.createElement('div');
-    messageContainer.appendChild(contentElement);
-    messageContainer.appendChild(timestamp);
-  
-    chatMessages.appendChild(messageContainer);
-  
-    messageInput.value = '';
-  });
-  
-
-
-// $(document).ready(function() 
-//     // Load messages on page load
-//     $.get('/get_messages/', function(data) {
-//         for (var i = 0; i < data.messages.length; i++) {
-//             var message = data.messages[i];
-//             var content = $('<p>').text(message.content);
-//             var timestamp = $('<span>').text(message.timestamp);
-//             $('#chat-messages').append(content).append(timestamp);
-//         }
-//     });
-
-//     $('#chat-form').submit(function(e) {
-//         e.preventDefault();
-//         var content = $('#message-input').val();
-//         $.post('/post_message/', {content: content}, function(data) {
-//             if (data.success) {
-//                 var content = $('<p>').text(content);
-//                 var timestamp = $('<span>').text(new Date().toISOString());
-//                 $('#chat-messages').append(content).append(timestamp);
-//                 $('#message-input').val('');
-//             }
-//         });
-//     });
-// });
+  })
